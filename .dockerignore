@@ -1,0 +1,19 @@
+# Gradle build files and directories
+.gradle
+build/
+
+# IDE-specific files
+.idea/
+*.iml
+
+# Operating system-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+tmp/
+
+# The Dockerfile and .dockerignore themselves
+Dockerfile
+.dockerignore

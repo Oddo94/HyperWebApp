@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Docker Run</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to <span class="highlight">Run Docker Run</span> 🚀</h1>
+</header>
+<main>
+    <div class="container">
+        <p>Hello, <span class="dynamic-name" th:text="${name}">Docker Enthusiast</span>!</p>
+        <p>Welcome to the <strong>Run Docker Run</strong> project. This is a demonstration of a Dockerized Spring Boot web application!</p>
+        <button onclick="showMessage()">Click Me for a Fun Fact!</button>
+        <div id="fun-fact" class="fun-fact hidden"></div>
+    </div>
+</main>
+<footer>
+    <p>Powered by Kotlin, Spring Boot, and (soon) Docker ❤️</p>
+</footer>
+
+<script>
+    function showMessage() {
+        const facts = [
+            "Docker was released in 2013 and revolutionized containerization!",
+            "Kotlin is the official language for Android development!",
+            "Spring Boot makes building web apps incredibly easy!",
+            "Containers make deployments predictable and scalable!"
+        ];
+        const randomFact = facts[Math.floor(Math.random() * facts.length)];
+        const funFactElement = document.getElementById("fun-fact");
+        funFactElement.textContent = randomFact;
+        funFactElement.classList.remove("hidden");
+        funFactElement.classList.add("show");
+    }
+</script>
+</body>
+</html>
